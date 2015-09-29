@@ -6,12 +6,10 @@ public class ItemTest {
 
     @Test
     public void createItemTest(){
-        SpecialPrice specialPrice = new SpecialPrice(2, 10.00);
-        Item item = new Item("A", 1, 20.00, specialPrice);
-        assertEquals("A", item.sku);
+        Product product = new Product("A", null);
+        Item item = new Item(product, 20.00);
+        assertEquals(product, item.product);
         assertEquals(20.00, item.singlePrice, 0.0001);
-        assertEquals(specialPrice, item.specialPrice);
-        assertEquals(1, item.quantity);
     }
 
 }

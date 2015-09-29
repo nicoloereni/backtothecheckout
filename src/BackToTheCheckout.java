@@ -6,18 +6,11 @@ public class BackToTheCheckout {
 
         for(Item item:itemList)
         {
-            priceSum += getPriceSum(item);
+            priceSum += item.singlePrice;
         }
 
         return priceSum;
     }
 
-    private double getPriceSum(Item item) {
 
-        if(item.specialPrice == null){
-            return item.singlePrice * item.quantity;
-        }
-
-        return item.specialPrice.getSpecialPriceSum(item.quantity, item.singlePrice);
-    }
 }

@@ -1,14 +1,10 @@
 public class Item {
-    public String sku;
+    public Product product;
     public double singlePrice;
-    public SpecialPrice specialPrice;
-    public int quantity;
 
-    public Item(String sku, int quantity, double singlePrice, SpecialPrice specialPrice) {
+    public Item(Product product, double singlePrice) {
 
-        this.sku = sku;
-        this.singlePrice = singlePrice;
-        this.specialPrice = specialPrice;
-        this.quantity = quantity;
+        this.product = product;
+        this.singlePrice = singlePrice;;
     }
 }
