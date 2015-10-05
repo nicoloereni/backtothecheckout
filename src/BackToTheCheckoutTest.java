@@ -34,6 +34,17 @@ public class BackToTheCheckoutTest {
         assertEquals(70.00, backToTheCheckout.sum(itemList), 0.0001);
     }
 
+    @Test
+    public void sortItemsList(){
+        itemList.add(itemWithSpecialPrice);
+        itemList.add(itemWithSpecialPrice);
+        ArrayList<Item> sortedItemList = backToTheCheckout.sort(itemList);
+        assertEquals("A", sortedItemList.get(0).product.sku);
+        assertEquals("A", sortedItemList.get(1).product.sku);
+        assertEquals("A", sortedItemList.get(2).product.sku);
+        assertEquals("C", sortedItemList.get(3).product.sku);
+    }
+
 //    @Test
 //    public void twoForOneComplexTest(){
 //        itemList.add(new Item("D", 3, 30.00, new SpecialPrice(2, 30.00)));

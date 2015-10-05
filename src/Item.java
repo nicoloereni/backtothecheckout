@@ -3,8 +3,8 @@ public class Item {
     public double singlePrice;
 
     public Item(Product product, double singlePrice) {
-
         this.product = product;
-        this.singlePrice = singlePrice;;
+        this.singlePrice = singlePrice;
     }
+
 }
